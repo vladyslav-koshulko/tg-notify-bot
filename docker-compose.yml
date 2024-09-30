@@ -1,0 +1,10 @@
+version: '3'
+services:
+  notification-app:
+    image: notification-app:latest
+    environment:
+      - TG_USER_PASSWORD=${TG_USER_PASSWORD}
+      - TG_TOKEN=${TG_TOKEN}
+      - TG_BOT_NAME=${TG_BOT_NAME}
+    ports:
+      - "9090:8080"
